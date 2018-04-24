@@ -1,0 +1,321 @@
+<!Doctype html>
+<html lang="ru">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Домашняя работа</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <style>
+            body {
+                font-family: 'Open Sans', sans-serif;
+            }
+            @keyframes anim1 {
+                from { 
+                    background-color: red;
+                    width: 50px;
+                    height: 50px;
+                }
+                12.5% {
+                    transform: scale(1.5, 1.5);
+                    background-color: orange;
+                }
+                25% {
+                    background-color: green;
+                    transform: scale(0.666, 0.666);
+                }
+                37.5% {
+                    transform: scale(1.5, 1.5);
+                    background-color: blue;
+                }
+                50% {
+                    background-color: red;
+                    transform: scale(0.666, 0.666);
+                }
+                62.5% {
+                    transform: scale(1.5, 1.5);
+                    background-color: blue;
+                }
+                75% {
+                    background-color: green;
+                    transform: scale(0.666, 0.666);
+                }
+                87.5% {
+                    transform: scale(1.5, 1.5);
+                    background-color: orange;
+                }
+                to {
+                    background-color: red;
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+            @keyframes anim2 {
+                from {
+                    background-image: url(http://bipbap.ru/wp-content/uploads/2017/03/summer.jpg);
+                }
+                25% {
+                    background-image: url(http://wp.widewallpapers.ru/2k/nature/winter/1920x1200/winter-wallpaper-1920x1200-002.jpg);
+                }
+                50% {
+                    background-image: url(http://luxfon.com/pic/201203/1920x1200/luxfon.com-5788.jpg);
+                }
+                75% {
+                    background-image: url(http://luxfon.com/pic/201203/1920x1200/luxfon.com-5571.jpg);
+                }
+                to {
+                    background-image: url(http://bipbap.ru/wp-content/uploads/2017/03/summer.jpg);
+                }
+            }
+            @keyframes anim3-1 {
+                from {
+                    transform: translate(0, 0);
+                }
+                25% {
+                    transform: translate(200px, 0);
+                    border-radius: 50%;
+                }
+                50% {
+                    transform: translate(200px, 200px);
+                    border-radius: 0;
+                }
+                75% {
+                    transform: translate(0, 200px);
+                    border-radius: 50%;
+                }
+                to {
+                    transform: translate(0, 0);
+                    border-radius: 0;
+                }
+            }
+            @keyframes anim3-2 {
+                from {
+                    transform: translate(200px, 0);
+                    border-radius: 50%;
+                }
+                25% {
+                    transform: translate(200px, 200px);
+                    border-radius: 0;
+                }
+                50% {
+                    transform: translate(0, 200px);
+                    border-radius: 50%;
+                }
+                75% {
+                    transform: translate(0, 0);
+                    border-radius: 0;
+                }
+                to {
+                    transform: translate(200px, 0);
+                    border-radius: 50%;
+                }
+            }
+            @keyframes anim3-3 {
+                from {
+                    transform: translate(200px, 200px);
+                }
+                25% {
+                    transform: translate(0, 200px);
+                    border-radius: 50%;
+                }
+                50% {
+                    transform: translate(0, 0);
+                    border-radius: 0;
+                }
+                75% {
+                    transform: translate(200px, 0);
+                    border-radius: 50%;
+                }
+                to {
+                    transform: translate(200px, 200px);
+                    border-radius: 0;
+                }
+            }
+            @keyframes anim3-4 {
+                from {
+                    transform: translate(0, 200px);
+                    border-radius: 50%;
+                }
+                25% {
+                    transform: translate(0, 0);
+                    border-radius: 0;
+                }
+                50% {
+                    transform: translate(200px, 0);
+                    border-radius: 50%;
+                }
+                75% {
+                    transform: translate(200px, 200px);
+                    border-radius: 0;
+                }
+                to {
+                    transform: translate(0, 200px);
+                    border-radius: 50%;
+                }
+            }
+            @keyframes anim4-1 {
+                from {
+                    background: red;
+                }
+                60% {
+                    background: red;
+                }
+                70% {
+                    background: red;
+                }
+                75% {
+                    background: white;
+                }
+                80% {
+                    background: red;
+                }
+                85% {
+                    background: white;
+                }
+                90% {
+                    background: red;
+                }
+                95% {
+                    background: white;
+                }
+                to {
+                    background: red;
+                }
+            }
+            @keyframes anim4-2 {
+                from {
+                    background: yellow;
+                }
+                to {
+                    background: yellow;
+                }
+            }    
+            @keyframes anim4-3 {
+                from {
+                    background: green;
+                }
+                60% {
+                    background: green;
+                }
+                70% {
+                    background: green;
+                }
+                75% {
+                    background: white;
+                }
+                80% {
+                    background: green;
+                }
+                85% {
+                    background: white;
+                }
+                90% {
+                    background: green;
+                }
+                95% {
+                    background: white;
+                }
+                to {
+                    background: green;
+                }
+            }
+            .circle {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                margin-left: 50px;
+                animation: anim1 4s ease-in-out -1s infinite; 
+            }
+            .image {
+                width: 320px;
+                height: 200px;
+                background-image: url(http://bipbap.ru/wp-content/uploads/2017/03/summer.jpg);
+                background-size: 320px 200px;
+                animation: anim2 8s ease-in-out infinite;
+            }
+            .block1 {
+                position: absolute;
+                background: red;
+                width: 100px;
+                height: 100px;
+                animation: anim3-1 4s ease-in-out infinite;
+            }
+            .block2 {
+                position: absolute;
+                background: green;
+                width: 100px;
+                height: 100px;
+                animation: anim3-2 4s ease-in-out infinite;
+            }
+            .block3 {
+                position: absolute;
+                background: blue;
+                width: 100px;
+                height: 100px;
+                animation: anim3-3 4s ease-in-out infinite;
+            }
+            .block4 {
+                position: absolute;
+                background: orange;
+                width: 100px;
+                height: 100px;
+                animation: anim3-4 4s ease-in-out infinite;
+            }
+            .ex4 {
+                margin-top: 340px;
+            }
+            .light {
+                position: relative;
+                width: 555px;
+                height: 495px;
+                background-image: url(http://steshka.ru/wp-content/uploads/2015/10/svetofor_kartinki_5.jpg);
+                background-size: 555px 495px;
+            }
+            .light:hover .red {
+                animation: anim4-1 10s ease-in-out; 
+            }
+            .light:hover .yellow {
+                animation: anim4-2 5s ease-in-out 10s; 
+            }
+            .light:hover .green {
+                animation: anim4-3 10s ease-in-out 15s; 
+            }
+            .light div {
+                position: absolute;
+                background: white;
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+                margin-left: 218px;
+            }
+            .red {
+                margin-top: 53px;
+            }
+            .yellow {
+                margin-top: 188px;
+            }
+            .green {
+                margin-top: 324px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Домашняя работа</h1>
+        <h2>Задание 1</h2>
+        <div class="circle"></div>
+        <h2>Задание 2</h2>
+        <div class="image"></div> 
+        <h2>Задание 3</h2>   
+        <div class="block1"></div>
+        <div class="block2"></div>
+        <div class="block3"></div>
+        <div class="block4"></div>
+        <h2 class="ex4">Задание 4</h2>
+        <div class="light">
+            <div class="red"></div>
+            <div class="yellow"></div>
+            <div class="green"></div>
+        </div>
+    </body> 
+
+</html>
